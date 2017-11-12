@@ -141,7 +141,9 @@ public class JobData {
                 aValue = aValue.toLowerCase();
 
                 if (aValue.contains(value)) {
-                    jobs.add(row);
+                    if (!jobs.contains(row)) {
+                        jobs.add(row);
+                    }
                 }
             }
         }
